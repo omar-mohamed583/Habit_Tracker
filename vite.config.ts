@@ -5,10 +5,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/Habit_Tracker/",
   plugins: [
-    react(),
+    [react()],
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
-  ],
-  base: "/Habit_Tracker/",
+  ]
 });

@@ -19,9 +19,8 @@ export function useLocalStorage<T>(key: string, val: T) {
 }
 
 function dateReviver(key: string, value: unknown) {
-  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}T/.test(value)) {
+  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}T/.test(value) && key !== null) {
     return parseISO(value)
   }
-
-  return value
+  return value;
 }

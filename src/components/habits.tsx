@@ -1,9 +1,5 @@
-import {
-  format,
-  isFuture,
-  isSameDay,
-  subDays,
-} from "../../../node_modules/date-fns";
+
+import { format, isFuture, isSameDay, subDays } from "date-fns";
 import { useHabit, type Habit } from "../context/contextProvider";
 
 type HabitWrapper = {

@@ -1,6 +1,6 @@
-import { isSameDay } from "date-fns";
 import { HabitContext, type Habit, type HabitProviderProps } from "./contextProvider";
 import { useLocalStorage } from "../hooks/localStorage";
+import { isSameDay } from "date-fns";
 
 export function HabitProvider({ children }: HabitProviderProps) {
   const [habits, setHabits] = useLocalStorage<Habit[]>('Habits', []);
